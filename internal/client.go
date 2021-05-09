@@ -16,7 +16,7 @@ import (
 
 const (
 	apiURLFormat      = "%s://%s%s"
-	baseURL           = "localhost:5000"
+	baseURL           = "kernel:8080"
 	scheme            = "http"
 	apiTokenHeaderKey = "X-Riot-Token"
 )
