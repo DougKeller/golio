@@ -16,8 +16,8 @@ import (
 
 const (
 	apiURLFormat      = "%s://%s.%s%s"
-	baseURL           = "api.riotgames.com"
-	scheme            = "https"
+	baseURL           = "kernel"
+	scheme            = "http"
 	apiTokenHeaderKey = "X-Riot-Token"
 )
 
