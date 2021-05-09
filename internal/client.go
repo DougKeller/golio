@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	apiURLFormat      = "%s://%s.%s%s"
+	apiURLFormat      = "%s://%s%s"
 	baseURL           = "localhost:5000"
 	scheme            = "http"
 	apiTokenHeaderKey = "X-Riot-Token"
@@ -166,7 +166,7 @@ func (c *Client) NewRequest(method, endpoint string, body io.Reader) (*http.Requ
 		"method":   "NewRequest",
 		"endpoint": endpoint,
 	})
-	request, err := http.NewRequest(method, fmt.Sprintf(apiURLFormat, scheme, c.Region, baseURL, endpoint), body)
+	request, err := http.NewRequest(method, fmt.Sprintf(apiURLFormat, scheme, baseURL, endpoint), body)
 	if err != nil {
 		logger.Debug(err)
 		return nil, err
